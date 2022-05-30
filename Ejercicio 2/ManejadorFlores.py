@@ -1,5 +1,4 @@
 import csv
-from distutils import archive_util
 from flores import flores
 import numpy as np
 
@@ -13,6 +12,8 @@ class ManejadorFlores:
     def AgregarFlor(self,flor):
         self.__ArregloFLores = np.append(self.__ArregloFLores,flor)
 
+    def RetornaListadeFlores(self):
+        return self.__ArregloFLores
 
     def IngresoArchivo(self):
         archivo = open(r'C:\Users\HermanGS\Desktop\UNIVERSIDAD\Segundo año\Programación Orientada a Objetos\Unidad 3\Ejercicios\Ejercicio 2\flores.csv')
@@ -29,3 +30,23 @@ class ManejadorFlores:
     def MostrarArreglo(self):
         for i in self.__ArregloFLores:
             print(i)
+
+
+    def MostrarFloresPorFama(self):
+        for i in self.__ArregloFLores:
+            i.MostrarfloresVersionFama()
+
+    def Mostrar5floresMasVendidas(self):
+        listaaux = []
+        for i in range(len(self.__ArregloFLores)):
+            listaaux.append(self.__ArregloFLores[i])
+        listaaux.sort(key = lambda x: x.getFama(),reverse = True)
+        print("Lista auxiliar del Arreglo de Flores ordenada al revez por Contador de Fama : ")
+        i=0
+        while i<5 and i <len(listaaux):
+            print(listaaux[i])
+            i=i+1
+        
+    # def MostrarFloresPorFamaYGrande(self):
+    #     for i in self.__ArregloFLores:
+    #         i.MostrarfloresFamaYGrande()
