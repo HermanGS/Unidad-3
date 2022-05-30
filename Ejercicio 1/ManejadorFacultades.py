@@ -24,7 +24,7 @@ class ManejadorFacultades:
             print("\n")
 
     def lecturaArchivos(self):
-            archivo = open(r'C:\Users\HermanGS\Desktop\UNIVERSIDAD\Segundo año\Programación Orientada a Objetos\Unidad 3\Ejercicios\Ejercicio 1\Facultades.csv')
+            archivo = open('Facultades.csv')
             reader = csv.reader( archivo, delimiter = ',' )
             fila=next(reader)
             # print("Printeo de fila : ")
