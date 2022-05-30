@@ -16,7 +16,7 @@ class ManejadorFlores:
         return self.__ArregloFLores
 
     def IngresoArchivo(self):
-        archivo = open(r'C:\Users\HermanGS\Desktop\UNIVERSIDAD\Segundo año\Programación Orientada a Objetos\Unidad 3\Ejercicios\Ejercicio 2\flores.csv')
+        archivo = open('flores.csv')
         reader = csv.reader(archivo,delimiter=';')
         for fila in reader:
             numero = int(fila[0])
