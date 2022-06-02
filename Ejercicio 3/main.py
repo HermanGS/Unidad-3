@@ -3,7 +3,6 @@ from ManejadorJugadores import ManejadorJugadores
 from ManejadorContratos import ManejadorContratos
 
 if __name__ == '__main__':
-    print("gay")
 
     ME = Manejador_Equipos()
     MJ = ManejadorJugadores()
