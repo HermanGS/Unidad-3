@@ -1,7 +1,5 @@
 
 class Jugador:
-    __codEquipo : int
-    __codJugador : int 
     __nombre = ""
     __dni = 0
     __ciudad_natal = ""
@@ -9,9 +7,7 @@ class Jugador:
     __fechaNacimiento = ""
 
 
-    def __init__(self,codEquipo,codJugador,nombre,dni,ciudad_natal,pais_origen,fechaNacimiento):
-        self.__codEquipo = codEquipo
-        self.__codJugador = codJugador
+    def __init__(self,nombre,dni,ciudad_natal,pais_origen,fechaNacimiento):
         self.__nombre = nombre
         self.__dni = dni
         self.__ciudad_natal = ciudad_natal
@@ -19,4 +15,10 @@ class Jugador:
         self.__fechaNacimiento = fechaNacimiento
 
     def __str__(self) -> str:
-        return "CodigoEquipo : {}, CodigoJugador : {} ,Nombre : {},Dni : {},Ciudad Natal : {},Pais Origen : {},Fecha Nacimiento : {}".format(self.__codEquipo,self.__codJugador,self.__nombre,self.__dni,self.__ciudad_natal,self.__pais_origen,self.__fechaNacimiento)
+        return "Nombre : {},Dni : {},Ciudad Natal : {},Pais Origen : {},Fecha Nacimiento : {}".format(self.__nombre,self.__dni,self.__ciudad_natal,self.__pais_origen,self.__fechaNacimiento)
+
+    def getNombre(self):
+        return self.__nombre
+    
+    def getDNI(self):
+        return self.__dni

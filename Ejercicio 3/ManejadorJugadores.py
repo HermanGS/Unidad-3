@@ -17,7 +17,7 @@ class ManejadorJugadores:
 
 
     def IngresoArchivo(self):
-        archivo = open('Jugadores.csv')
+        archivo = open(r'C:\Users\HermanGS\Desktop\Carpeta POO Compartiada\POO\Unidad 3\Ejercicios\Unidad-3-main\Ejercicio 3\Jugadores.csv')
         reader = csv.reader(archivo,delimiter=',')
         
         for fila in reader:
@@ -31,7 +31,15 @@ class ManejadorJugadores:
         archivo.close()
 
     def MostrarListaJugadores(self):
+        print("Lista De Jugadores : ")
         for i in self.__ListaJugadores:    
             print(i)
         
-                         
+    def BuscarJugador(self,Nombre):
+        valor = None
+        i=0
+        while i<len(self.__ListaJugadores) and Nombre != self.__ListaJugadores[i].getNombre():
+            i=i+1
+        if i<len(self.__ListaJugadores):
+            valor = self.__ListaJugadores[i]
+        return valor
