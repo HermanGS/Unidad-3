@@ -16,7 +16,7 @@ class Manejador_Equipos:
         jug = Jugador()
 
     def lecturaArchivos(self):
-        archivo = open(r'C:\Users\HermanGS\Desktop\Carpeta POO Compartiada\POO\Unidad 3\Ejercicios\Unidad-3-main\Ejercicio 3\Equipos.csv')
+        archivo = open('Equipos.csv')
         reader = csv.reader( archivo, delimiter = ',' )
         fila=next(reader)
         cantidad = int(fila[0])
