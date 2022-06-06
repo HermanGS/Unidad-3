@@ -17,7 +17,7 @@ class ManejadorJugadores:
 
 
     def IngresoArchivo(self):
-        archivo = open(r'C:\Users\HermanGS\Desktop\Carpeta POO Compartiada\POO\Unidad 3\Ejercicios\Unidad-3-main\Ejercicio 3\Jugadores.csv')
+        archivo = open('Jugadores.csv')
         reader = csv.reader(archivo,delimiter=',')
         
         for fila in reader:
